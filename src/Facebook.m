@@ -56,6 +56,7 @@ static void *finishedContext = @"finishedContext";
 
 @synthesize    accessToken = _accessToken,
             expirationDate = _expirationDate,
+     lastAccessTokenUpdate = _lastAccessTokenUpdate,
            sessionDelegate = _sessionDelegate,
                permissions = _permissions,
            urlSchemeSuffix = _urlSchemeSuffix,

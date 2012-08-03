@@ -44,6 +44,7 @@
 
 @property(nonatomic, copy) NSString* accessToken;
 @property(nonatomic, copy) NSDate* expirationDate;
+@property(nonatomic, copy) NSDate* lastAccessTokenUpdate;
 @property(nonatomic, assign) id<FBSessionDelegate> sessionDelegate;
 @property(nonatomic, copy) NSString* urlSchemeSuffix;
 @property(nonatomic, readonly, getter=isFrictionlessRequestsEnabled) 
