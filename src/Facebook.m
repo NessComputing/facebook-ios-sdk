@@ -372,6 +372,10 @@ static void *finishedContext = @"finishedContext";
  */
 - (BOOL)shouldExtendAccessToken {
     if ([self isSessionValid]){
+        if (!_lastAccessTokenUpdate) {
+            return NO;
+        }
+        
         NSCalendar *calendar = [[[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar] autorelease];
         NSDateComponents *components = [calendar components:NSHourCalendarUnit
                                                    fromDate:_lastAccessTokenUpdate
