@@ -138,8 +138,6 @@
 - (void)fbDidExtendToken:(NSString*)accessToken
                expiresAt:(NSDate*)expiresAt;
 
-- (void)fbDidFailToExtendTokenWithError:(NSError *)error;
-
 /**
  * Called when the user logged out.
  */
