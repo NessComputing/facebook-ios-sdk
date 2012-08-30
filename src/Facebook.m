@@ -812,6 +812,9 @@ static void *finishedContext = @"finishedContext";
 - (void)request:(FBRequest *)request didFailWithError:(NSError *)error {
     _isExtendingAccessToken = NO;
     _requestExtendingAccessToken = nil;
+    
+    if ([self.sessionDelegate respondsToSelector:@selector(fbDidFailToExtendTokenWithError:)])
+        [self.sessionDelegate fbDidFailToExtendTokenWithError:error];
 }
 
 - (void)request:(FBRequest *)request didLoad:(id)result {
