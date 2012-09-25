@@ -371,10 +371,9 @@ static void *finishedContext = @"finishedContext";
  * Returns YES if the last time a new token was obtained was over 24 hours ago.
  */
 - (BOOL)shouldExtendAccessToken {
-    if ([self isSessionValid]){
-        if (!_lastAccessTokenUpdate) {
+    if ([self isSessionValid]) {
+        if (!_lastAccessTokenUpdate)
             return NO;
-        }
         
         NSCalendar *calendar = [[[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar] autorelease];
         NSDateComponents *components = [calendar components:NSHourCalendarUnit
