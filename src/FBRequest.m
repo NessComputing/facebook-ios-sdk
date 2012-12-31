@@ -20,7 +20,7 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 // global
 
-static NSString* kUserAgent = @"FacebookConnect";
+NSString * const FBUserAgent = @"FBiOSSDK.3.1.0";
 static NSString* kStringBoundary = @"3i2ndDfv2rTHiSisAbouNdArYfORhtTPEefj3q2f";
 static const int kGeneralErrorCode = 10000;
 static const int kRESTAPIAccessTokenErrorCode = 190;
@@ -310,7 +310,7 @@ static const NSTimeInterval kTimeoutInterval = 180.0;
     [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]
                             cachePolicy:NSURLRequestReloadIgnoringLocalCacheData
                         timeoutInterval:kTimeoutInterval];
-    [request setValue:kUserAgent forHTTPHeaderField:@"User-Agent"];
+    [request setValue:FBUserAgent forHTTPHeaderField:@"User-Agent"];
 
 
     [request setHTTPMethod:self.httpMethod];

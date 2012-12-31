@@ -17,6 +17,8 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+NSString * const FBUserAgent;
+
 @protocol FBRequestDelegate;
 
 enum {
